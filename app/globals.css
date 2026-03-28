@@ -1,0 +1,21 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@config "../tailwind.config.ts";
+
+@theme {
+  --color-rosePink: #D4537E;
+  --color-deepPlum: #72243E;
+  --color-mintGreen: #1D9E75;
+  --color-warmWhite: #FCFBFB;
+  --font-sans: var(--font-nunito), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+:root {
+  --background: #FCFBFB;
+  --foreground: #72243E;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+}

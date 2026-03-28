@@ -1,0 +1,39 @@
+{
+  "entities": {
+    "Mother": {
+      "title": "Mother",
+      "description": "A postpartum mother assigned to a CHW",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Name of the mother"
+        },
+        "riskLevel": {
+          "type": "string",
+          "enum": ["low", "medium", "high"],
+          "description": "AI-assessed risk level"
+        },
+        "lastCheckIn": {
+          "type": "timestamp",
+          "description": "Timestamp of the last check-in"
+        },
+        "missedCheckIns": {
+          "type": "number",
+          "description": "Number of consecutive missed check-ins"
+        },
+        "chwId": {
+          "type": "string",
+          "description": "The UID of the Community Health Worker assigned to this mother"
+        }
+      },
+      "required": ["name", "riskLevel", "missedCheckIns", "chwId"]
+    }
+  },
+  "firestore": {
+    "/mothers/{motherId}": {
+      "schema": "Mother",
+      "description": "Collection of mothers"
+    }
+  }
+}
