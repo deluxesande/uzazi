@@ -1,6 +1,6 @@
 import type {Metadata} from 'next';
 import { Nunito } from 'next/font/google';
-import './globals.css'; // Global styles
+import './globals.css';
 import { AuthProvider } from '@/context/AuthContext';
 
 const nunito = Nunito({
@@ -11,7 +11,7 @@ const nunito = Nunito({
 
 export const metadata: Metadata = {
   title: 'Uzazi',
-  description: 'Web portal for Uzazi',
+  description: 'Born from the language of your mothers.',
 };
 
 export default function RootLayout({children}: {children: React.ReactNode}) {
